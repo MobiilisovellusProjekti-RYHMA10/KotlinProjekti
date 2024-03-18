@@ -1,6 +1,9 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+
 }
 
 android {
@@ -59,6 +62,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -66,4 +70,18 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    // Retrofit and Moshi
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.moshi:moshi:1.12.0")
+    kapt ("com.squareup.moshi:moshi-kotlin-codegen:1.12.0")
+    implementation ("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation ("com.squareup.moshi:moshi-kotlin:1.12.0") // Make sure this line is added for Kotlin support
+    implementation("io.coil-kt:coil-compose:2.1.0") // Use the latest version
+
+    // OkHttp Logging Interceptor for debugging
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.0")
+
+    // Coroutine support for Retrofit
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation ("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
 }
