@@ -84,4 +84,12 @@ dependencies {
     // Coroutine support for Retrofit
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
     implementation ("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
+    implementation ("io.coil-kt:coil:2.1.0") // Ensure you're using the latest version
+    implementation ("io.coil-kt:coil-svg:2.1.0") // SVG support
+    implementation("androidx.compose.material3:material3:1.2.1")
+    implementation("androidx.compose.material3:material3-window-size-class:1.2.1")
+    implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.0.0-alpha05")
+
+
+
 }
